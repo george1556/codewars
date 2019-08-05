@@ -32,3 +32,22 @@
 // }
 //
 // console.log(order("is2 Thi1s T4est 3a"));
+
+
+
+
+
+
+// TITLE: Mumbling
+// LEVEL: 7 kyu
+// DESCRIPTION:This time no story, no theory. The examples below show you how to write function accum:
+// EXAMPLES:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+function accum(s) {
+  return s.toUpperCase().split("").map((currentValue, index) => {return currentValue + currentValue.toLowerCase().repeat(index)}).join("-");
+}
+
+console.log(accum("RqaEzty"));
