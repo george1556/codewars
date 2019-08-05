@@ -65,70 +65,70 @@
 // EXAMPLE: solution(1000); // should return 'M'
 
 // ANSWER:
-function solution(number){
-  let romanNumeral = "";
-
-  while(number - 1000 >= 0){
-    number = number-1000;
-    romanNumeral += "M";
-  }
-  while(number - 500 >= 0){
-    if(number >= 900){
-      romanNumeral += "CM"
-      number = number-900;
-    } else{
-    number = number-500;
-    romanNumeral += "D";
-    }
-  }
-  while(number - 100 >= 0){
-    if(number >= 400){
-      romanNumeral += "CD"
-      number = number-400;
-    }else {
-      number = number-100;
-      romanNumeral += "C";
-    }
-  }
-  while(number - 50 >= 0){
-    if(number >= 90){
-      romanNumeral += "XC";
-      number = number-90;
-    }else {
-      number = number-50;
-      romanNumeral += "L";
-    }
-  }
-  while(number - 10 >= 0){
-    if(number >= 40){
-      romanNumeral += "XL"
-      number = number-40;
-    }else {
-      number = number-10;
-      romanNumeral += "X";
-    }
-
-  }
-  while(number - 5 >= 0){
-    if(number === 9){
-      romanNumeral += "IX"
-      number = number-9
-    } else{
-      number = number-5;
-      romanNumeral += "V";
-    }
-  }
-  while(number - 1 >= 0){
-    if(number === 4){
-      romanNumeral += "IV"
-      number = number-4;
-    }else {
-      number = number-1;
-      romanNumeral += "I";
-    }
-  }
-
-  return romanNumeral;
-}
-
-console.log(solution(1990));
+// function solution(number){
+//   let romanNumeral = "";
+//
+//   while(number - 1000 >= 0){
+//     number = number-1000;
+//     romanNumeral += "M";
+//   }
+//   while(number - 500 >= 0){
+//     if(number >= 900){
+//       romanNumeral += "CM"
+//       number = number-900;
+//     } else{
+//     number = number-500;
+//     romanNumeral += "D";
+//     }
+//   }
+//   while(number - 100 >= 0){
+//     if(number >= 400){
+//       romanNumeral += "CD"
+//       number = number-400;
+//     }else {
+//       number = number-100;
+//       romanNumeral += "C";
+//     }
+//   }
+//   while(number - 50 >= 0){
+//     if(number >= 90){
+//       romanNumeral += "XC";
+//       number = number-90;
+//     }else {
+//       number = number-50;
+//       romanNumeral += "L";
+//     }
+//   }
+//   while(number - 10 >= 0){
+//     if(number >= 40){
+//       romanNumeral += "XL"
+//       number = number-40;
+//     }else {
+//       number = number-10;
+//       romanNumeral += "X";
+//     }
+//
+//   }
+//   while(number - 5 >= 0){
+//     if(number === 9){
+//       romanNumeral += "IX"
+//       number = number-9
+//     } else{
+//       number = number-5;
+//       romanNumeral += "V";
+//     }
+//   }
+//   while(number - 1 >= 0){
+//     if(number === 4){
+//       romanNumeral += "IV"
+//       number = number-4;
+//     }else {
+//       number = number-1;
+//       romanNumeral += "I";
+//     }
+//   }
+//
+//   return romanNumeral;
+// }
+//
+// console.log(solution(1990));
