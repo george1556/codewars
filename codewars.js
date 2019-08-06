@@ -151,10 +151,39 @@
 //
 // Error checking for text strings or other invalid inputs is not required, only valid integers will be passed into the function.
 
-// SOLUTION: 
+// SOLUTION:
 // function narcissistic(value) {
 //   return value.toString().split("").reduce((accumulator, currentValue, index, array) => {return accumulator += Math.pow(currentValue, array.length)}, 0) == value ? true : false;
 // }
 //
 //
 // console.log(narcissistic(153));
+
+
+// TITLE: Moving Zeros To The End
+// LEVEL: 5 kyu
+// DESCRIPTION: Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+// EXAMPLE:
+// moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]
+//
+// SOLUTION:
+//
+var moveZeros = function (arr) {
+  let count = 0;
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if((arr[i] === 0) || (arr[i] === "0")){
+      count++;
+    } else {
+    newArr.push(arr[i]);
+    }
+  }
+  while(count > 0){
+    newArr.push(0)
+    count--;
+  }
+
+  return newArr;
+}
+
+console.log(moveZeros([1,2,0,1,0,1,0,3,0,1]));
